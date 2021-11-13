@@ -11,6 +11,8 @@ namespace TelegramBotAsp
         [HttpPost("update")]
         public IActionResult Update(Update update)
         {
+            // /start => reg user
+
             return Ok();
         }
     }

@@ -8,17 +8,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e22c9b5-1610-4a89-bfef-757acc0fd7e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/TelegramBotAsp.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/TelegramBotController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/appsettings.json" afterDir="false" />
-    </list>
+    <list default="true" id="0e22c9b5-1610-4a89-bfef-757acc0fd7e8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,8 +77,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1636551038489</updated>
-      <workItem from="1636551044678" duration="620000" />
+      <workItem from="1636551044678" duration="1050000" />
     </task>
+    <task id="LOCAL-00001" summary="FC">
+      <created>1636551771212</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1636551771212</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,11 +107,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="FC" />
+    <option name="LAST_COMMIT_MESSAGE" value="FC" />
   </component>
   <component name="WindowStateProjectService">
     <state x="461" y="185" key="SettingsEditor" timestamp="1636551243161">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1636551243161" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1636552103430">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1636552103430" />
   </component>
 </project>

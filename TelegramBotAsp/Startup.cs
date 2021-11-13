@@ -15,6 +15,7 @@ namespace TelegramBotAsp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<DataContext>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
