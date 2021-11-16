@@ -36,12 +36,12 @@ namespace TelegramBotAsp
             {
                 Username = chat?.Username,
                 ChatId = chat.Id,
-                FirstName = chat?.LastName,
+                FirstName = chat?.FirstName,
                 LastName = chat?.LastName
             };
 
-            //var result = await _context.Users.AddAsync(appUser);
-            //await _context.SaveChangesAsync();
+            var result = await _context.Users.AddAsync(appUser);
+            await _context.SaveChangesAsync();
 
             await _telegramBotClient.SendTextMessageAsync(chat.Id, "Вы успешно зарегались", ParseMode.Markdown);
             
