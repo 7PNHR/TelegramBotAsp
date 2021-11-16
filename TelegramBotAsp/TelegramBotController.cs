@@ -22,7 +22,8 @@ namespace TelegramBotAsp
         }
 
         // GET
-        [HttpPost]//("update")
+        //("update")
+        [HttpPost]
         public async Task<IActionResult> Update([FromBody]object update)
         {
             // /start => reg user
@@ -39,8 +40,8 @@ namespace TelegramBotAsp
                 LastName = chat?.LastName
             };
 
-            var result = await _context.Users.AddAsync(appUser);
-            await _context.SaveChangesAsync();
+            //var result = await _context.Users.AddAsync(appUser);
+            //await _context.SaveChangesAsync();
 
             await _telegramBotClient.SendTextMessageAsync(chat.Id, "Вы успешно зарегались", ParseMode.Markdown);
             
