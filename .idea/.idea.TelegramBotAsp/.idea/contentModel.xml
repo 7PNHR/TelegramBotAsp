@@ -6,7 +6,6 @@
     <e p="C:\Users\LPNHR\Desktop\Типо рабочий стол\Code\.net\TelegramBotAsp" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="TelegramBotAsp" t="IncludeRecursive">
-        <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="DataContext.cs" t="Include" />
@@ -27,6 +26,7 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+        <e p="TelegramBot.cs" t="Include" />
         <e p="TelegramBotAsp.csproj" t="IncludeRecursive" />
         <e p="TelegramBotController.cs" t="Include" />
       </e>
