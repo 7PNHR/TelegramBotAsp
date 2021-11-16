@@ -1,9 +1,8 @@
 ﻿using System.Threading.Tasks;
-using System.Xml.Linq;
 using Microsoft.Extensions.Configuration;
 using Telegram.Bot;
 
-namespace TelegramBotAsp
+namespace TelegramBotAsp.Services
 {
     public class TelegramBot
     {

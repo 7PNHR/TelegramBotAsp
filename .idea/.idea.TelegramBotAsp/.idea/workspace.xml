@@ -9,8 +9,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e22c9b5-1610-4a89-bfef-757acc0fd7e8" name="Default Changelist" comment="AddSome">
+      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/Command.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/IMessageHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/IUserService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/TelegramBotController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/TelegramBotController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Entities/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Entities/BaseEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/TelegramBot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/TelegramBot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/TelegramBotController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Controllers/TelegramBotController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +40,16 @@
         <option value="$PROJECT_DIR$/TelegramBotAsp/TelegramBot.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/DataContext.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/appsettings.json" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/TelegramBotController.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/BaseEntity.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/Command.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/UserService.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IUserService.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/TelegramBot.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IMessageHandler.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Controllers/TelegramBotController.cs" />
       </list>
     </option>
   </component>
@@ -96,6 +112,8 @@
       <workItem from="1636810512010" duration="760000" />
       <workItem from="1637041040252" duration="2705000" />
       <workItem from="1637051071843" duration="9193000" />
+      <workItem from="1637065165984" duration="1017000" />
+      <workItem from="1637070621079" duration="3941000" />
     </task>
     <task id="LOCAL-00001" summary="FC">
       <created>1636551771212</created>
@@ -139,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637062093074</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="V.1">
+      <created>1637065193528</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1637065193529</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +192,8 @@
     <MESSAGE value="mysql?" />
     <MESSAGE value="FSQL" />
     <MESSAGE value="MS SQL" />
-    <option name="LAST_COMMIT_MESSAGE" value="MS SQL" />
+    <MESSAGE value="V.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="V.1" />
   </component>
   <component name="WindowStateProjectService">
     <state width="450" height="464" key="DebuggerActiveHint" timestamp="1637061301226">
@@ -262,28 +288,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="100" y="100" width="1720" height="880" key="VCS.FileHistoryDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1637061533252" />
-    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2" timestamp="1637062094276">
+    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2" timestamp="1637065194885">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1637062094276" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TelegramBotAsp/TelegramBotController.cs</url>
-          <line>42</line>
-          <properties documentPath="C:\Users\LPNHR\Desktop\Типо рабочий стол\Code\.net\TelegramBotAsp\TelegramBotAsp\TelegramBotController.cs" initialLine="42">
-            <startOffsets>
-              <option value="1232" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1284" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1637065194885" />
   </component>
 </project>
