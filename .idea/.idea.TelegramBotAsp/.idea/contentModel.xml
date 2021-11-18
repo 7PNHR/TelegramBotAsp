@@ -8,8 +8,11 @@
       <e p="TelegramBotAsp" t="IncludeRecursive">
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="CommandNames.cs" t="Include" />
         <e p="Commands" t="Include">
+          <e p="BaseCommand.cs" t="Include" />
           <e p="Command.cs" t="Include" />
+          <e p="StartCommand.cs" t="Include" />
         </e>
         <e p="Controllers" t="Include">
           <e p="TelegramBotController.cs" t="Include" />

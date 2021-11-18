@@ -9,16 +9,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e22c9b5-1610-4a89-bfef-757acc0fd7e8" name="Default Changelist" comment="AddSome">
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/Command.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/IMessageHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/IUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/CommandNames.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/BaseCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/StartCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Entities/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Entities/BaseEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/TelegramBot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/TelegramBot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/TelegramBotController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Controllers/TelegramBotController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/TelegramBotAsp/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/TelegramBotAsp/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/TelegramBotAsp/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/TelegramBotAsp/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,14 +45,19 @@
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IUserService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/TelegramBot.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IMessageHandler.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Controllers/TelegramBotController.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/BaseCommand.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/CommandNames.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/StartCommand.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="20jHNKBtYv0gD0VtjoAtgVX7PBQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -113,7 +116,11 @@
       <workItem from="1637041040252" duration="2705000" />
       <workItem from="1637051071843" duration="9193000" />
       <workItem from="1637065165984" duration="1017000" />
-      <workItem from="1637070621079" duration="3941000" />
+      <workItem from="1637070621079" duration="4558000" />
+      <workItem from="1637076412522" duration="3000" />
+      <workItem from="1637085640570" duration="42000" />
+      <workItem from="1637167097045" duration="584000" />
+      <workItem from="1637235931839" duration="681000" />
     </task>
     <task id="LOCAL-00001" summary="FC">
       <created>1636551771212</created>
@@ -164,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637065193529</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="com">
+      <created>1637076386225</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1637076386225</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +207,8 @@
     <MESSAGE value="FSQL" />
     <MESSAGE value="MS SQL" />
     <MESSAGE value="V.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="V.1" />
+    <MESSAGE value="com" />
+    <option name="LAST_COMMIT_MESSAGE" value="com" />
   </component>
   <component name="WindowStateProjectService">
     <state width="450" height="464" key="DebuggerActiveHint" timestamp="1637061301226">
@@ -288,9 +303,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="100" y="100" width="1720" height="880" key="VCS.FileHistoryDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1637061533252" />
-    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2" timestamp="1637065194885">
+    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2" timestamp="1637076388088">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1637065194885" />
+    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1637076388088" />
   </component>
 </project>
