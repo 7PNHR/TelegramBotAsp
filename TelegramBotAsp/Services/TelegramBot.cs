@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Telegram.Bot;
+using TelegramBotAsp.Entities;
 
 namespace TelegramBotAsp.Services
 {

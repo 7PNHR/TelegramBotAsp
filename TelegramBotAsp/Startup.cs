@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TelegramBotAsp.Commands;
 using TelegramBotAsp.Services;
 
 namespace TelegramBotAsp
@@ -29,6 +30,8 @@ namespace TelegramBotAsp
             services.AddDbContext<DataContext>(opt => opt.UseSqlServer(_configuration.GetConnectionString("Db")));
             services.AddSingleton<TelegramBot>();
             services.AddSingleton<IMessageHandler, MessageHandler>();
+            services.AddSingleton<IParsingService, ParsingService>();
+           // services.AddSingleton<BaseCommand, StartCommand>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)

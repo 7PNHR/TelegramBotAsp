@@ -24,6 +24,7 @@ namespace TelegramBotAsp.Controllers
         [HttpPost]
         public async Task<IActionResult> Update([FromBody] object update)
         {
+
             var upd = JsonConvert.DeserializeObject<Update>(update.ToString());
 
             var chat = upd.Message?.Chat;
@@ -37,7 +38,7 @@ namespace TelegramBotAsp.Controllers
             {
                 return Ok();
             }
-
+            
             return Ok();
         }
     }

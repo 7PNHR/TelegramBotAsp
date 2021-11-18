@@ -41,9 +41,13 @@
         </e>
         <e p="Services" t="Include">
           <e p="IMessageHandler.cs" t="Include" />
+          <e p="IParsingService.cs" t="Include" />
+          <e p="ITextHandler.cs" t="Include" />
           <e p="IUserService.cs" t="Include" />
           <e p="MessageHandler.cs" t="Include" />
+          <e p="ParsingService.cs" t="Include" />
           <e p="TelegramBot.cs" t="Include" />
+          <e p="TextHandler.cs" t="Include" />
           <e p="UserService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />

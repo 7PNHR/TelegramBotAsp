@@ -26,6 +26,7 @@ namespace TelegramBotAsp.Services
             var user = await _context.Users.FirstOrDefaultAsync(x => x.ChatId == newUser.ChatId);
             if (user != null) return user;
             var result = await _context.Users.AddAsync(newUser);
+
             await _context.SaveChangesAsync();
 
             return result.Entity;
