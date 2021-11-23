@@ -8,15 +8,20 @@ namespace TelegramBotAsp.Services
     public class ParsingService : IParsingService
     {
         
-        private readonly List<TextTemplate> _templates;
+        private List<TextTemplate> _templates;
+        private readonly DataContext _context;
 
         public ParsingService(DataContext context)
         {
-            _templates = context.Templates.ToList();
+            //templates = context.Templates.ToList();
+            _context = context;
         }
 
         public string ParseMessage(string text)
-            => _templates.Find(x => x.Text.ToLower().Equals(text.ToLower()))?.Template;
+        {
+            _templates = _context.Templates.ToList();
+            return _templates.Find(x => x.Text.ToLower().Equals(text.ToLower()))?.Template;
+        }
     }
     
 }

@@ -30,8 +30,10 @@ namespace TelegramBotAsp
             services.AddDbContext<DataContext>(opt => opt.UseSqlServer(_configuration.GetConnectionString("Db")));
             services.AddSingleton<TelegramBot>();
             services.AddSingleton<IMessageHandler, MessageHandler>();
+            services.AddSingleton<IUserService, UserService>();
             services.AddSingleton<IParsingService, ParsingService>();
-           // services.AddSingleton<BaseCommand, StartCommand>();
+            //services.AddSingleton<ITextHandler, TextHandler>();
+            services.AddSingleton<BaseCommand, StartCommand>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
