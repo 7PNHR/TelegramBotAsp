@@ -12,21 +12,25 @@
         <e p="CommandNames.cs" t="Include" />
         <e p="Commands" t="Include">
           <e p="BaseCommand.cs" t="Include" />
-          <e p="Command.cs" t="Include" />
           <e p="StartCommand.cs" t="Include" />
+          <e p="TextCommand.cs" t="Include" />
         </e>
         <e p="Controllers" t="Include">
+          <e p="AdminController.cs" t="Include" />
           <e p="TelegramBotController.cs" t="Include" />
         </e>
         <e p="DataContext.cs" t="Include" />
         <e p="Entities" t="Include">
           <e p="AppUser.cs" t="Include" />
           <e p="BaseEntity.cs" t="Include" />
+          <e p="Log.cs" t="Include" />
           <e p="TextTemplate.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
           <e p="20211116112113_adduser.cs" t="Include" />
           <e p="20211116112113_adduser.Designer.cs" t="Include" />
+          <e p="20211128044656_AddLogs.cs" t="Include" />
+          <e p="20211128044656_AddLogs.Designer.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -42,13 +46,9 @@
         </e>
         <e p="Services" t="Include">
           <e p="IMessageHandler.cs" t="Include" />
-          <e p="IParsingService.cs" t="Include" />
-          <e p="ITextHandler.cs" t="Include" />
           <e p="IUserService.cs" t="Include" />
           <e p="MessageHandler.cs" t="Include" />
-          <e p="ParsingService.cs" t="Include" />
           <e p="TelegramBot.cs" t="Include" />
-          <e p="TextHandler.cs" t="Include" />
           <e p="UserService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />

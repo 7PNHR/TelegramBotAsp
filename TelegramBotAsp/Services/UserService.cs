@@ -16,23 +16,19 @@ namespace TelegramBotAsp.Services
 
         public async Task<AppUser> GetOrCreate(Update update)
         {
-            if (update.Message != null)
+            if (update.Message == null) return null;
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.ChatId == update.Message.Chat.Id);
+            if (user != null) return user;
+            var newUser = new AppUser()
             {
-                var newUser = new AppUser()
-                {
-                    Username = update.Message.Chat.Username,
-                    ChatId = update.Message.Chat.Id,
-                    FirstName = update.Message.Chat.FirstName,
-                    LastName = update.Message.Chat.LastName
-                };
-                var user = await _context.Users.FirstOrDefaultAsync(x => x.ChatId == newUser.ChatId);
-                if (user != null) return user;
-                var result = await _context.Users.AddAsync(newUser);
-
-                await _context.SaveChangesAsync();
-
-                return result.Entity;
-            }
+                Username = update.Message.Chat.Username,
+                ChatId = update.Message.Chat.Id,
+                FirstName = update.Message.Chat.FirstName,
+                LastName = update.Message.Chat.LastName
+            };
+            var result = await _context.Users.AddAsync(newUser);
+            await _context.SaveChangesAsync();
+            return result.Entity;
         }
     }
 }

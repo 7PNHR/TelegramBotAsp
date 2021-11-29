@@ -12,41 +12,31 @@ namespace TelegramBotAsp.Services
     public class MessageHandler : IMessageHandler
     {
         private readonly List<BaseCommand> _commands;
-        //private readonly ITextHandler _textHandler;
-        private BaseCommand _lastCommand;
 
-        public MessageHandler(IServiceProvider serviceProvider, ITextHandler textHandler)
+        public MessageHandler(IServiceProvider serviceProvider)
         {
             _commands = serviceProvider.GetServices<BaseCommand>().ToList();
-            //_textHandler = textHandler;
         }
 
         public async Task Handle(Update update)
         {
-            if (update?.Message?.Chat == null && update?.CallbackQuery == null)
-                return;
-            if (update.Message != null && update.Message.Text.Contains(CommandNames.StartCommand))
+            if (update?.Message?.Chat == null || update.Message.Text == null) return;
+            foreach (var command in _commands)
             {
-                await ExecuteCommand(CommandNames.StartCommand, update);
-                return;
+                if (update.Message != null && update.Message.Text.Contains(command.Name))
+                {
+                    await ExecuteCommand(command.Name, update);
+                    return;
+                }
             }
-
-            if (update.Type == UpdateType.Message)
-                return;
-                //await _textHandler.Handle(update);
-
-            //var text = _parsingService.ParseMessage(update.Message?.Text);
-
-            if (update.Type == UpdateType.CallbackQuery)
-            {
-                //TODO админка!
-            }
+            await ExecuteCommand("text", update);
         }
 
         private async Task ExecuteCommand(string commandName, Update update)
         {
-            //_lastCommand = _commands.First(x => x.Name == commandName);
-            await _lastCommand.ExecuteAsync(update);
+            var command = _commands.First(x => x.Name == commandName);
+            await command.ExecuteAsync(update);
         }
     }
 }
+//            return _templates.Find(x => x.Text.ToLower().Equals(text.ToLower()))?.Template;
