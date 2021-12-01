@@ -10,11 +10,13 @@ namespace TelegramBotAsp.Commands
     {
         private readonly IUserService _userService;
         private readonly TelegramBotClient _botClient;
+        private readonly ILogService _logService;
 
-        public StartCommand(IUserService userService, TelegramBot telegramBot)
+        public StartCommand(IUserService userService, TelegramBot telegramBot, ILogService logService)
         {
             _userService = userService;
             _botClient = telegramBot.GetBot().Result;
+            _logService = logService;
         }
 
         public override string Name => CommandNames.StartCommand;
@@ -23,10 +25,11 @@ namespace TelegramBotAsp.Commands
         {
             var user = await _userService.GetOrCreate(update);
             await _botClient.SendTextMessageAsync(user.ChatId,
-                "Добро пожаловать! Я онбординговый бот!\nВы можете задавать мне вопросы, касательно организации. " +
-                "Вы можете спросить меня про следующие темы:\n- оргструктура компании\n- документооборот\n- ключевые продукты компании" +
-                "\n- корпоративная культура\n- соц.пакет\n- инструменты",
+                "Добро пожаловать! Я онбординговый бот!" +
+                "\nВы можете задавать мне вопросы, касательно организации." +
+                "\nДля ознакомления с моими возможностями напишите /help.",
                 ParseMode.Markdown);
+            await _logService.Log(user, CommandNames.StartCommand);
         }
     }
 }

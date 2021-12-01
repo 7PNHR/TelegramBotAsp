@@ -39,4 +39,3 @@ namespace TelegramBotAsp.Services
         }
     }
 }
-//            return _templates.Find(x => x.Text.ToLower().Equals(text.ToLower()))?.Template;

@@ -11,7 +11,9 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="CommandNames.cs" t="Include" />
         <e p="Commands" t="Include">
+          <e p="AllTempsCommand.cs" t="Include" />
           <e p="BaseCommand.cs" t="Include" />
+          <e p="HelpCommand.cs" t="Include" />
           <e p="StartCommand.cs" t="Include" />
           <e p="TextCommand.cs" t="Include" />
         </e>
@@ -45,8 +47,10 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Services" t="Include">
+          <e p="ILogService.cs" t="Include" />
           <e p="IMessageHandler.cs" t="Include" />
           <e p="IUserService.cs" t="Include" />
+          <e p="LogService.cs" t="Include" />
           <e p="MessageHandler.cs" t="Include" />
           <e p="TelegramBot.cs" t="Include" />
           <e p="UserService.cs" t="Include" />

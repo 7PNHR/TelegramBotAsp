@@ -37,8 +37,11 @@ namespace TelegramBotAsp
             services.AddSingleton<TelegramBot>();
             services.AddSingleton<IMessageHandler, MessageHandler>();
             services.AddSingleton<IUserService, UserService>();
+            services.AddSingleton<ILogService, LogService>();
             services.AddSingleton<BaseCommand, StartCommand>();
             services.AddSingleton<BaseCommand, TextCommand>();
+            services.AddSingleton<BaseCommand, HelpCommand>();
+            services.AddSingleton<BaseCommand, AllTempsCommand>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
