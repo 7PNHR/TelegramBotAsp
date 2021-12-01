@@ -9,17 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e22c9b5-1610-4a89-bfef-757acc0fd7e8" name="Default Changelist" comment="18-11 2 Commit">
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/AllTempsCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/HelpCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/ILogService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/LogService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/CommandNames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/CommandNames.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Commands/StartCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/StartCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Commands/TextCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/TextCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Controllers/AdminController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Controllers/AdminController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TelegramBotAsp/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +29,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/AppUser.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/TextTemplate.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/TelegramBot.cs" />
@@ -50,25 +40,26 @@
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/ITextHandler.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/TextHandler.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/Command.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/BaseEntity.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IParsingService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/ParsingService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/UserService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/DataContext.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IUserService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IMessageHandler.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Controllers/AdminController.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/appsettings.json" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/CommandNames.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/ILogService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/Log.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/HelpCommand.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/StartCommand.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/LogService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/AllTempsCommand.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/TextCommand.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/BaseEntity.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/AppUser.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/appsettings.json" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Controllers/AdminController.cs" />
       </list>
     </option>
   </component>
@@ -157,7 +148,7 @@
       <workItem from="1638107842813" duration="572000" />
       <workItem from="1638165020847" duration="747000" />
       <workItem from="1638176257492" duration="4057000" />
-      <workItem from="1638379319790" duration="2125000" />
+      <workItem from="1638379319790" duration="3987000" />
     </task>
     <task id="LOCAL-00001" summary="FC">
       <created>1636551771212</created>
@@ -243,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638165040937</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Log added">
+      <created>1638381965729</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1638381965729</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,7 +578,8 @@
     <MESSAGE value="18-11 2 Commit" />
     <MESSAGE value="23/11 1" />
     <MESSAGE value="CanWork" />
-    <option name="LAST_COMMIT_MESSAGE" value="CanWork" />
+    <MESSAGE value="Log added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Log added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2098" y="264" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637239498176">
@@ -596,25 +595,25 @@
     </state>
     <state width="497" height="464" key="DebuggerActiveHint/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638181010195" />
     <state width="497" height="464" key="DebuggerActiveHint/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637498910287" />
-    <state width="1877" height="523" key="GridCell.Tab.0.bottom" timestamp="1638181262196">
+    <state width="1877" height="417" key="GridCell.Tab.0.bottom" timestamp="1638384550384">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="523" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638181262196" />
+    <state width="1877" height="417" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638384550384" />
     <state width="1877" height="557" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715370" />
-    <state width="1877" height="523" key="GridCell.Tab.0.center" timestamp="1638181262196">
+    <state width="1877" height="417" key="GridCell.Tab.0.center" timestamp="1638384550383">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="523" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638181262196" />
+    <state width="1877" height="417" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638384550383" />
     <state width="1877" height="557" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715370" />
-    <state width="1877" height="523" key="GridCell.Tab.0.left" timestamp="1638181262196">
+    <state width="1877" height="417" key="GridCell.Tab.0.left" timestamp="1638384550383">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="523" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638181262196" />
+    <state width="1877" height="417" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638384550383" />
     <state width="1877" height="557" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715370" />
-    <state width="1877" height="523" key="GridCell.Tab.0.right" timestamp="1638181262196">
+    <state width="1877" height="417" key="GridCell.Tab.0.right" timestamp="1638384550383">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="523" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638181262196" />
+    <state width="1877" height="417" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638384550383" />
     <state width="1877" height="557" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715370" />
     <state width="1877" height="523" key="GridCell.Tab.1.bottom" timestamp="1638181262196">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -708,10 +707,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="100" y="100" width="1720" height="880" key="VCS.FileHistoryDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1637061533252" />
-    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2" timestamp="1638165042422">
+    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2" timestamp="1638381967118">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638165042422" />
+    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638381967118" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1638165231877">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
