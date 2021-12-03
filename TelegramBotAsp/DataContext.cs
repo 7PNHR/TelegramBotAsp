@@ -9,13 +9,13 @@ namespace TelegramBotAsp
 {
     public class DataContext : DbContext
     {
-        public DataContext(DbContextOptions<DataContext> options): base(options)
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
         }
 
         public DbSet<AppUser> Users { get; set; }
         public DbSet<TextTemplate> Templates { get; set; }
         public DbSet<Log> Logs { get; set; }
-
+        public DbSet<Topic> Topics { get; set; }
     }
 }

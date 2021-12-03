@@ -27,6 +27,7 @@
           <e p="BaseEntity.cs" t="Include" />
           <e p="Log.cs" t="Include" />
           <e p="TextTemplate.cs" t="Include" />
+          <e p="Topic.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
           <e p="20211116112113_adduser.cs" t="Include" />

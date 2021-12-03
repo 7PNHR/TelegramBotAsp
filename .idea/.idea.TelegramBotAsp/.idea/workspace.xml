@@ -9,9 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e22c9b5-1610-4a89-bfef-757acc0fd7e8" name="Default Changelist" comment="18-11 2 Commit">
+      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Entities/Topic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Controllers/AdminController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Controllers/AdminController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/DataContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Entities/TextTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Entities/TextTemplate.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +32,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/TextTemplate.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/TelegramBot.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/TelegramBotController.cs" />
@@ -43,7 +45,6 @@
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IParsingService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/ParsingService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/UserService.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/DataContext.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IUserService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IMessageHandler.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" />
@@ -59,6 +60,9 @@
         <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/AppUser.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/appsettings.json" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/Topic.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/TextTemplate.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/DataContext.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Controllers/AdminController.cs" />
       </list>
     </option>
@@ -149,6 +153,8 @@
       <workItem from="1638165020847" duration="747000" />
       <workItem from="1638176257492" duration="4057000" />
       <workItem from="1638379319790" duration="3987000" />
+      <workItem from="1638384573489" duration="46000" />
+      <workItem from="1638517693014" duration="2007000" />
     </task>
     <task id="LOCAL-00001" summary="FC">
       <created>1636551771212</created>
@@ -241,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638381965729</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Log added fix">
+      <created>1638384596779</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1638384596779</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,7 +592,8 @@
     <MESSAGE value="23/11 1" />
     <MESSAGE value="CanWork" />
     <MESSAGE value="Log added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Log added" />
+    <MESSAGE value="Log added fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Log added fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2098" y="264" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637239498176">
@@ -707,10 +721,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="100" y="100" width="1720" height="880" key="VCS.FileHistoryDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1637061533252" />
-    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2" timestamp="1638381967118">
+    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2" timestamp="1638384599874">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638381967118" />
+    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638384599874" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1638165231877">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
