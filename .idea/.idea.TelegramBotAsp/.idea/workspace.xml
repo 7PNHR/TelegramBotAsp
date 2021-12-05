@@ -9,11 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e22c9b5-1610-4a89-bfef-757acc0fd7e8" name="Default Changelist" comment="18-11 2 Commit">
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Entities/Topic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Entities/Request.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Entities/Response.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Controllers/AdminController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Controllers/AdminController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/DataContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Entities/TextTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Entities/TextTemplate.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,11 +22,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1BA52DC0-B103-422E-BA91-AD87A1AA9FE3/7/ServiceCollectionServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BDD96C5F-630A-4529-8DAC-C07D80DEB23B/A/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C7788B2B-C733-412D-8EE3-9C302FF7CE57/3/HostBuilder.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -61,9 +55,11 @@
         <option value="$PROJECT_DIR$/TelegramBotAsp/appsettings.json" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/Topic.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/TextTemplate.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/DataContext.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Controllers/AdminController.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/TextTemplate.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/Request.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/Response.cs" />
       </list>
     </option>
   </component>
@@ -155,6 +151,7 @@
       <workItem from="1638379319790" duration="3987000" />
       <workItem from="1638384573489" duration="46000" />
       <workItem from="1638517693014" duration="2007000" />
+      <workItem from="1638590878027" duration="1620000" />
     </task>
     <task id="LOCAL-00001" summary="FC">
       <created>1636551771212</created>
