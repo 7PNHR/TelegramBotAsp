@@ -14,8 +14,10 @@ namespace TelegramBotAsp
         }
 
         public DbSet<AppUser> Users { get; set; }
-        public DbSet<TextTemplate> Templates { get; set; }
         public DbSet<Log> Logs { get; set; }
-        public DbSet<Topic> Topics { get; set; }
+        public DbSet<Response> Responses { get; set; }
+        public DbSet<Request> Requests { get; set; }
+        public DbSet<TopicInfo> Topics { get; set; }
+        
     }
 }

@@ -9,11 +9,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e22c9b5-1610-4a89-bfef-757acc0fd7e8" name="Default Changelist" comment="18-11 2 Commit">
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Entities/Request.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Entities/Response.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Entities/TopicInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/IRepositoryService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/RepositoryService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/CommandNames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/CommandNames.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Commands/AllTempsCommand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Commands/HelpCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/HelpCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Commands/StartCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/StartCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Commands/TextCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/TextCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/DataContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Entities/Request.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Entities/Request.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Entities/TextTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Entities/TextTemplate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Entities/Topic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Services/ILogService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Services/LogService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +34,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1BA52DC0-B103-422E-BA91-AD87A1AA9FE3/7/ServiceCollectionServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BDD96C5F-630A-4529-8DAC-C07D80DEB23B/A/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C7788B2B-C733-412D-8EE3-9C302FF7CE57/3/HostBuilder.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -42,24 +59,26 @@
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IUserService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IMessageHandler.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/CommandNames.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/ILogService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/Log.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/HelpCommand.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/StartCommand.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/LogService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/AllTempsCommand.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/TextCommand.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/BaseEntity.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/AppUser.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/appsettings.json" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/Topic.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/DataContext.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Controllers/AdminController.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/TextTemplate.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/Request.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/Response.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/CommandNames.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/ILogService.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/LogService.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Entities/TopicInfo.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/DataContext.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/StartCommand.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/TextCommand.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IRepositoryService.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/RepositoryService.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/HelpCommand.cs" />
       </list>
     </option>
   </component>
@@ -151,7 +170,7 @@
       <workItem from="1638379319790" duration="3987000" />
       <workItem from="1638384573489" duration="46000" />
       <workItem from="1638517693014" duration="2007000" />
-      <workItem from="1638590878027" duration="1620000" />
+      <workItem from="1638710420294" duration="5003000" />
     </task>
     <task id="LOCAL-00001" summary="FC">
       <created>1636551771212</created>
@@ -706,10 +725,10 @@
     </state>
     <state width="1877" height="523" key="GridCell.Tab.4.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638181262197" />
     <state width="1877" height="523" key="GridCell.Tab.4.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state x="778" y="230" key="RiderGenerateDialog" timestamp="1638180341432">
+    <state x="778" y="230" key="RiderGenerateDialog" timestamp="1638694877858">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="778" y="230" key="RiderGenerateDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638180341432" />
+    <state x="778" y="230" key="RiderGenerateDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638694877858" />
     <state x="461" y="185" key="SettingsEditor" timestamp="1636551243161">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -722,9 +741,17 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638384599874" />
+    <state x="1920" y="0" width="1612" height="1066" maximized="true" key="dock-window-1" timestamp="1638715757786">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1920" y="0" width="1612" height="1066" maximized="true" key="dock-window-1/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638715757786" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1638165231877">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638165231877" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1638698087228">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638698087228" />
   </component>
 </project>

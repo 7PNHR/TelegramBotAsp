@@ -2,6 +2,6 @@
 {
     public class Request : TextTemplate
     {
-        
+        public Response Response { get; set; }
     }
 }

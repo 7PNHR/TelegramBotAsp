@@ -8,28 +8,26 @@ namespace TelegramBotAsp.Commands
 {
     public class StartCommand : BaseCommand
     {
-        private readonly IUserService _userService;
         private readonly TelegramBotClient _botClient;
-        private readonly ILogService _logService;
+        private readonly IRepositoryService _repositoryService;
 
-        public StartCommand(IUserService userService, TelegramBot telegramBot, ILogService logService)
+        public StartCommand(TelegramBot telegramBot, IRepositoryService repositoryService)
         {
-            _userService = userService;
             _botClient = telegramBot.GetBot().Result;
-            _logService = logService;
+            _repositoryService = repositoryService;
         }
 
         public override string Name => CommandNames.StartCommand;
 
         public override async Task ExecuteAsync(Update update)
         {
-            var user = await _userService.GetOrCreate(update);
+            var user = await _repositoryService.GetUser(update);
             await _botClient.SendTextMessageAsync(user.ChatId,
                 "Добро пожаловать! Я онбординговый бот!" +
                 "\nВы можете задавать мне вопросы, касательно организации." +
                 "\nДля ознакомления с моими возможностями напишите /help.",
                 ParseMode.Markdown);
-            await _logService.Log(user, CommandNames.StartCommand);
+            _repositoryService.Log(user, CommandNames.StartCommand);
         }
     }
 }
