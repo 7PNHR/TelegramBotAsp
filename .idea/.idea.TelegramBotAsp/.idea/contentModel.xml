@@ -35,6 +35,8 @@
           <e p="20211116112113_adduser.Designer.cs" t="Include" />
           <e p="20211128044656_AddLogs.cs" t="Include" />
           <e p="20211128044656_AddLogs.Designer.cs" t="Include" />
+          <e p="20211205145223_AddTopicRequestResponse.cs" t="Include" />
+          <e p="20211205145223_AddTopicRequestResponse.Designer.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
