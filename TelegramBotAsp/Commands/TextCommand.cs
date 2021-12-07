@@ -25,9 +25,9 @@ namespace TelegramBotAsp.Commands
         public override async Task ExecuteAsync(Update update)
         {
             var user = await _repositoryService.GetUser(update);
-            var response = await _repositoryService.GetTemplate(update.Message.Text);
+            var response =  _repositoryService.GetTemplate(update.Message.Text).Result;
             await _botClient.SendTextMessageAsync(user.ChatId, response, ParseMode.Markdown);
-            _repositoryService.Log(user, update.Message.Text.ToLower());
+            await _repositoryService.Log(user, update.Message.Text.ToLower());
         }
     }
 }

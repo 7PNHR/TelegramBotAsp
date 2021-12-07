@@ -11,8 +11,7 @@ namespace TelegramBotAsp.Services
     {
         private readonly IUserService _userService;
         private readonly Dictionary<long, AppUser> _users = new Dictionary<long, AppUser>();
-        private Dictionary<long, Request> _requests;
-        private List<Response> _responses;
+        private Dictionary<string, string> _templates;
         private readonly DataContext _context;
         private readonly List<Log> _logs = new List<Log>();
 
@@ -35,19 +34,21 @@ namespace TelegramBotAsp.Services
 
         public async Task<string> GetTemplate(string template)
         {
-            var request = _requests.FirstOrDefault(x => x.Value.Template.Contains(template.ToLower()));
-            return _responses.FirstOrDefault(x => x.Id == request.Key)?.Template;
+            var temp = _templates
+                .FirstOrDefault(valuePair => valuePair.Key.ToLower().Equals(template.ToLower()));
+            return temp.Value;
         }
 
         public async Task<string> GetTopicInfo(string text)
         {
-            return _context.Topics.FirstOrDefaultAsync(x => x.Text.Equals(text.ToLower())).Result.HelpInfo;
+            return _context.Topics
+                .FirstOrDefaultAsync(x => x.Text.Equals(text.ToLower())).Result.HelpInfo;
         }
 
         public async Task Update()
         {
-            _requests = _context.Requests.ToDictionary(x => x.Response.Id);
-            _responses = _context.Responses.ToList();
+            _templates = _context.Templates
+                .ToDictionary(key => key.Request, element => element.Response);
         }
 
         public async Task Log(AppUser appUser, string message)
@@ -55,11 +56,11 @@ namespace TelegramBotAsp.Services
             _logs.Add(new Log {Message = message, User = appUser});
             lock (_logs)
             {
-                if (_logs.Count >= 10)
+                if (_logs.Count >= 1)//temp1
                 {
                     foreach (var log in _logs)
                         _context.Logs.Add(log);
-                    
+
                     _context.SaveChanges();
                     _logs.Clear();
                 }

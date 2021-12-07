@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using TelegramBotAsp.Entities;
+using TelegramBotAsp.Services;
 
 namespace TelegramBotAsp.Controllers
 {
@@ -12,32 +13,65 @@ namespace TelegramBotAsp.Controllers
     [Route("admin")]
     public class AdminController : ControllerBase
     {
-        private readonly DataContext _context;
+        private readonly IDataService _dataService;
 
-        public AdminController(DataContext context)
+        public AdminController(IDataService dataService)
         {
-            _context = context;
+            _dataService = dataService;
         }
         
-
         [HttpGet("topics")]
         public async Task<IActionResult> GetTopics()
         {
-            return Ok(JsonConvert.SerializeObject(_context.Topics.ToList()));
+            return Ok(JsonConvert.SerializeObject(_dataService.GetTopics().Result));
         }
 
-        [HttpGet("bot-logs")]
+        [HttpGet("logs")]
         public async Task<IActionResult> GetBotLogs()
         {
-            return Ok(JsonConvert.SerializeObject(_context.Logs.ToList()));
+            return Ok(JsonConvert.SerializeObject(_dataService.GetLogs().Result));
         }
 
-        [HttpGet("bot-logs-period")]
+        [HttpGet("logs-period")]
         public async Task<IActionResult> GetBotLogs(int days)
         {
             var date = DateTime.UtcNow - TimeSpan.FromDays(days);
-            return Ok(JsonConvert.SerializeObject(_context.Logs.Where(x => x.Date >= date).ToList()));
+            return Ok(JsonConvert.SerializeObject(_dataService.GetLogs().Result.Where(x => x.Date >= date).ToList()));
+        }
+
+        [HttpPost("add-request-and-response")]
+        public async Task<IActionResult> AddRequestAndResponse(string request, string response)
+        {
+            await _dataService.AddRequestAndResponse(request, response);
+            return Ok();
         }
         
+        [HttpPost("edit-request")]
+        public async Task<IActionResult> EditRequest(string oldRequest, string newRequest)
+        {
+            await _dataService.EditRequest(oldRequest, newRequest);
+            return Ok();
+        }
+        
+        [HttpPost("remove-request")]
+        public async Task<IActionResult> RemoveRequest(string request)
+        {
+            await _dataService.RemoveRequest(request);
+            return Ok();
+        }
+        
+        [HttpPost("edit-response")]
+        public async Task<IActionResult> EditResponse(string oldResponse, string newResponse)
+        {
+            await _dataService.EditResponse(oldResponse,newResponse);
+            return Ok();
+        }
+        
+        [HttpPost("remove-response")]
+        public async Task<IActionResult> RemoveResponse(string response)
+        {
+            await _dataService.RemoveResponse(response);
+            return Ok();
+        }
     }
 }

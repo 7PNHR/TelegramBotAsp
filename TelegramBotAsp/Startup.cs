@@ -37,6 +37,7 @@ namespace TelegramBotAsp
             services.AddSingleton<TelegramBot>();
             services.AddSingleton<IMessageHandler, MessageHandler>();
             services.AddSingleton<IUserService, UserService>();
+            services.AddSingleton<IDataService, DataService>();
             services.AddSingleton<IRepositoryService, RepositoryService>();
             services.AddSingleton<BaseCommand, StartCommand>();
             services.AddSingleton<BaseCommand, TextCommand>();

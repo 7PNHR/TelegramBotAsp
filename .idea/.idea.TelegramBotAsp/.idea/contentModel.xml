@@ -25,8 +25,6 @@
           <e p="AppUser.cs" t="Include" />
           <e p="BaseEntity.cs" t="Include" />
           <e p="Log.cs" t="Include" />
-          <e p="Request.cs" t="Include" />
-          <e p="Response.cs" t="Include" />
           <e p="TextTemplate.cs" t="Include" />
           <e p="TopicInfo.cs" t="Include" />
         </e>
@@ -37,6 +35,8 @@
           <e p="20211128044656_AddLogs.Designer.cs" t="Include" />
           <e p="20211205145223_AddTopicRequestResponse.cs" t="Include" />
           <e p="20211205145223_AddTopicRequestResponse.Designer.cs" t="Include" />
+          <e p="20211207160812_RemoveSomeTrash.cs" t="Include" />
+          <e p="20211207160812_RemoveSomeTrash.Designer.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -51,6 +51,8 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Services" t="Include">
+          <e p="DataService.cs" t="Include" />
+          <e p="IDataService.cs" t="Include" />
           <e p="IMessageHandler.cs" t="Include" />
           <e p="IRepositoryService.cs" t="Include" />
           <e p="IUserService.cs" t="Include" />

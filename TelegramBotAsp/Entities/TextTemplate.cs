@@ -2,6 +2,7 @@
 {
     public class TextTemplate : BaseEntity
     {
-        public string Template { get; set; }
+        public string Request { get; set; }
+        public string Response { get; set; }
     }
 }
