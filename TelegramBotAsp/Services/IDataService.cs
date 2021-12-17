@@ -12,8 +12,6 @@ namespace TelegramBotAsp.Services
         public Task RemoveRequest(string request);
         public Task EditResponse(string oldResponse, string newResponse);
         public Task RemoveResponse(string response);
-
-        public Task<List<TopicInfo>> GetTopics();
         public Task<List<Log>> GetLogs();
     }
 }

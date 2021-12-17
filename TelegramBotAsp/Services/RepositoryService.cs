@@ -39,12 +39,6 @@ namespace TelegramBotAsp.Services
             return temp.Value;
         }
 
-        public async Task<string> GetTopicInfo(string text)
-        {
-            return _context.Topics
-                .FirstOrDefaultAsync(x => x.Text.Equals(text.ToLower())).Result.HelpInfo;
-        }
-
         public async Task Update()
         {
             _templates = _context.Templates
@@ -56,7 +50,7 @@ namespace TelegramBotAsp.Services
             _logs.Add(new Log {Message = message, User = appUser});
             lock (_logs)
             {
-                if (_logs.Count >= 1)//temp1
+                if (_logs.Count >= 10)
                 {
                     foreach (var log in _logs)
                         _context.Logs.Add(log);
@@ -65,6 +59,14 @@ namespace TelegramBotAsp.Services
                     _logs.Clear();
                 }
             }
+        }
+
+        public async Task<string> GetTopicRequests(string topicName)
+        {
+            return _context.Templates
+                .Where(template => topicName.Equals(template.TopicName))
+                .Select(x => x.Request)
+                .Aggregate((x, y) => x + "/n" + y);
         }
     }
 }

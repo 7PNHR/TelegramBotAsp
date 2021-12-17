@@ -19,12 +19,6 @@ namespace TelegramBotAsp.Controllers
         {
             _dataService = dataService;
         }
-        
-        [HttpGet("topics")]
-        public async Task<IActionResult> GetTopics()
-        {
-            return Ok(JsonConvert.SerializeObject(_dataService.GetTopics().Result));
-        }
 
         [HttpGet("logs")]
         public async Task<IActionResult> GetBotLogs()

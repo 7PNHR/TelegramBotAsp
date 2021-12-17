@@ -66,10 +66,6 @@ namespace TelegramBotAsp.Services
             await _repositoryService.Update();
         }
 
-        public async Task<List<TopicInfo>> GetTopics()
-        {
-            return _context.Topics.ToList();
-        }
 
         public async Task<List<Log>> GetLogs()
         {

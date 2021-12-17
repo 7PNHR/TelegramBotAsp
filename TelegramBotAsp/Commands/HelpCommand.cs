@@ -34,7 +34,7 @@ namespace TelegramBotAsp.Commands
             }
             else
             {
-                await _botClient.SendTextMessageAsync(user.ChatId,await _repositoryService.GetTopicInfo(info[1])
+                await _botClient.SendTextMessageAsync(user.ChatId,await _repositoryService.GetTopicRequests(info[1])
                     ,ParseMode.Markdown);
                 _repositoryService.Log(user, update.Message.Text.ToLower());
             }

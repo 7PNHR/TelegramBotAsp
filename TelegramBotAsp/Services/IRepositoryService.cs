@@ -8,9 +8,9 @@ namespace TelegramBotAsp.Services
     {
         Task<AppUser> GetUser(Update update);
         Task<string> GetTemplate(string template);
-        Task<string> GetTopicInfo(string text);
         Task Update();
         Task Log(AppUser appUser, string message);
-        
+
+        Task<string> GetTopicRequests(string topicName);
     }
 }
