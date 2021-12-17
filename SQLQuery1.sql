@@ -1,5 +1,1 @@
-﻿select * from Templates;
-
-select * from Users;
-
-select * from Logs;
+﻿select * from Logs;
