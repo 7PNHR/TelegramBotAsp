@@ -17,9 +17,29 @@ namespace TelegramBotAsp.Services
             _repositoryService = repositoryService;
         }
 
-        public async Task AddRequestAndResponse(string request, string response)
+        public async Task AddTemplate(string request, string response, string topicName)
         {
-            await _context.Templates.AddAsync(new TextTemplate {Request = request, Response = response});
+            await _context.Templates.AddAsync(new TextTemplate {Request = request, Response = response, TopicName = topicName});
+            await _context.SaveChangesAsync();
+            await _repositoryService.Update();
+        }
+
+        public async Task EditTemplate(string request, string newResponse)
+        {
+            var template = await _context.Templates.FirstOrDefaultAsync(
+                x => x.Request.ToLower().Equals(request.ToLower()));
+            if (template == null) return;
+            template.Response = newResponse;
+            await _context.SaveChangesAsync();
+            await _repositoryService.Update();
+        }
+
+        public async Task RemoveTemplate(string request)
+        {
+            var template = await _context.Templates.FirstOrDefaultAsync(
+                x => x.Request.ToLower().Equals(request.ToLower()));
+            if (template == null) return;
+            _context.Templates.Remove(template);
             await _context.SaveChangesAsync();
             await _repositoryService.Update();
         }
@@ -34,42 +54,14 @@ namespace TelegramBotAsp.Services
             await _repositoryService.Update();
         }
 
-        public async Task RemoveRequest(string request)
-        {
-            var template = await _context.Templates.FirstOrDefaultAsync(
-                x => x.Request.ToLower().Equals(request.ToLower()));
-            if (template == null) return;
-            _context.Templates.Remove(template);
-            await _context.SaveChangesAsync();
-            await _repositoryService.Update();
-        }
-
-        public async Task EditResponse(string oldResponse, string newResponse)
-        {
-            var templates = _context.Templates.Where(
-                x => x.Response.ToLower().Equals(oldResponse.ToLower())).ToList();
-            if (templates.Count == 0) return;
-            foreach (var textTemplate in templates)
-                textTemplate.Response = newResponse;
-
-            await _context.SaveChangesAsync();
-            await _repositoryService.Update();
-        }
-
-        public async Task RemoveResponse(string response)
-        {
-            var templates = _context.Templates.Where(
-                x => x.Response.ToLower().Equals(response.ToLower())).ToList();
-            if (templates.Count == 0) return;
-            _context.Templates.RemoveRange(templates);
-            await _context.SaveChangesAsync();
-            await _repositoryService.Update();
-        }
-
-
         public async Task<List<Log>> GetLogs()
         {
             return _context.Logs.ToList();
+        }
+        
+        public async Task<List<TextTemplate>> GetTemplates()
+        {
+            return _context.Templates.ToList();
         }
     }
 }

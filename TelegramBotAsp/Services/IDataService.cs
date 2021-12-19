@@ -7,11 +7,12 @@ namespace TelegramBotAsp.Services
 {
     public interface IDataService
     {
-        public Task AddRequestAndResponse(string request, string response);
+        public Task AddTemplate(string request, string response, string topicName);
         public Task EditRequest(string oldRequest, string newRequest);
-        public Task RemoveRequest(string request);
-        public Task EditResponse(string oldResponse, string newResponse);
-        public Task RemoveResponse(string response);
+
+        public Task EditTemplate(string request, string newResponse);
+        public Task RemoveTemplate(string request);
         public Task<List<Log>> GetLogs();
+        public Task<List<TextTemplate>> GetTemplates();
     }
 }

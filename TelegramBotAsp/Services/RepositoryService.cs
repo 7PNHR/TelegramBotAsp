@@ -64,9 +64,10 @@ namespace TelegramBotAsp.Services
         public async Task<string> GetTopicRequests(string topicName)
         {
             return _context.Templates
-                .Where(template => topicName.Equals(template.TopicName))
+                .Where(template => topicName.ToLower().Equals(template.TopicName.ToLower()))
+                .ToList()//Странно конечно, когда ленивый метод не хочет доставать данные из базы без вызова ToList()
                 .Select(x => x.Request)
-                .Aggregate((x, y) => x + "/n" + y);
+                .Aggregate((x, y) => x + "\n" + y);
         }
     }
 }

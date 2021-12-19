@@ -36,6 +36,8 @@
           <e p="20211205145223_AddTopicRequestResponse.Designer.cs" t="Include" />
           <e p="20211207160812_RemoveSomeTrash.cs" t="Include" />
           <e p="20211207160812_RemoveSomeTrash.Designer.cs" t="Include" />
+          <e p="20211217071416_MVP3Migration.cs" t="Include" />
+          <e p="20211217071416_MVP3Migration.Designer.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">

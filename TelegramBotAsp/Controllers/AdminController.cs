@@ -9,6 +9,7 @@ using TelegramBotAsp.Services;
 
 namespace TelegramBotAsp.Controllers
 {
+    //TODO написать пару страничек, с нормальным вводом сообщений
     [ApiController]
     [Route("admin")]
     public class AdminController : ControllerBase
@@ -25,6 +26,12 @@ namespace TelegramBotAsp.Controllers
         {
             return Ok(JsonConvert.SerializeObject(_dataService.GetLogs().Result));
         }
+        
+        [HttpGet("templates")]
+        public async Task<IActionResult> GetBotTemplates()
+        {
+            return Ok(JsonConvert.SerializeObject(_dataService.GetTemplates().Result));
+        }
 
         [HttpGet("logs-period")]
         public async Task<IActionResult> GetBotLogs(int days)
@@ -33,39 +40,33 @@ namespace TelegramBotAsp.Controllers
             return Ok(JsonConvert.SerializeObject(_dataService.GetLogs().Result.Where(x => x.Date >= date).ToList()));
         }
 
-        [HttpPost("add-request-and-response")]
-        public async Task<IActionResult> AddRequestAndResponse(string request, string response)
+        [HttpPost("add-template")]
+        public async Task<IActionResult> AddRequestAndResponse(string request, string response, string topicName)
         {
-            await _dataService.AddRequestAndResponse(request, response);
+            await _dataService.AddTemplate(request, response, topicName);
             return Ok();
         }
-        
+
+        [HttpPost("edit-template")]
+        public async Task<IActionResult> EditTemplate(string request, string newResponse)
+        {
+            await _dataService.EditTemplate(request, newResponse);
+            return Ok();
+        }
+
+        [HttpPost("remove-template")]
+        public async Task<IActionResult> RemoveTemplate(string request)
+        {
+            await _dataService.RemoveTemplate(request);
+            return Ok();
+        }
+
         [HttpPost("edit-request")]
-        public async Task<IActionResult> EditRequest(string oldRequest, string newRequest)
+        public async Task<IActionResult> EditResponse(string oldRequest, string newRequest)
         {
-            await _dataService.EditRequest(oldRequest, newRequest);
+            await _dataService.EditRequest(oldRequest,newRequest);
             return Ok();
         }
-        
-        [HttpPost("remove-request")]
-        public async Task<IActionResult> RemoveRequest(string request)
-        {
-            await _dataService.RemoveRequest(request);
-            return Ok();
-        }
-        
-        [HttpPost("edit-response")]
-        public async Task<IActionResult> EditResponse(string oldResponse, string newResponse)
-        {
-            await _dataService.EditResponse(oldResponse,newResponse);
-            return Ok();
-        }
-        
-        [HttpPost("remove-response")]
-        public async Task<IActionResult> RemoveResponse(string response)
-        {
-            await _dataService.RemoveResponse(response);
-            return Ok();
-        }
+
     }
 }
