@@ -9,24 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e22c9b5-1610-4a89-bfef-757acc0fd7e8" name="Default Changelist" comment="18-11 2 Commit">
-      <change afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/ReplyKeyBoardCreateService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TelegramBotAsp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Commands/BaseCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/BaseCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Commands/HelpCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/HelpCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Commands/StartCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/StartCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Commands/TextCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Commands/TextCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Controllers/AdminController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Controllers/AdminController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Services/DataDownloadService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/DataDownloadService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Services/DataUploadUploadService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/DataUploadUploadService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Services/IDataDownloadService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/IDataDownloadService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Services/IDataUploadService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/IDataUploadService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/TelegramBotAsp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/TelegramBotAsp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Views/Admin/BotTemplates.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Views/Admin/BotTemplates.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/Views/Admin/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/Views/Admin/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramBotAsp/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramBotAsp/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,17 +81,17 @@
         <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/BaseCommand.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/StartCommand.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Startup.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IDataDownloadService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/appsettings.json" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/MessageHandler.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/InlineKeyBoardCreateService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/ReplyKeyBoardCreateService.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/HelpCommand.cs" />
-        <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/TextCommand.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Views/Admin/Edit.cshtml" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IDataUploadService.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Controllers/AdminController.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/DataUploadUploadService.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Services/IDataDownloadService.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/HelpCommand.cs" />
+        <option value="$PROJECT_DIR$/TelegramBotAsp/Commands/TextCommand.cs" />
         <option value="$PROJECT_DIR$/TelegramBotAsp/Services/DataDownloadService.cs" />
       </list>
     </option>
@@ -207,7 +194,7 @@
       <workItem from="1639723687926" duration="3506000" />
       <workItem from="1639739382703" duration="1369000" />
       <workItem from="1640232238392" duration="7795000" />
-      <workItem from="1640261858773" duration="6547000" />
+      <workItem from="1640261858773" duration="9082000" />
     </task>
     <task id="LOCAL-00001" summary="FC">
       <created>1636551771212</created>
@@ -349,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640233049243</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Commit">
+      <created>1640268862825</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1640268862825</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +669,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="FC" />
-    <MESSAGE value="Commit" />
     <MESSAGE value="AddSome" />
     <MESSAGE value="mysql?" />
     <MESSAGE value="FSQL" />
@@ -693,7 +686,8 @@
     <MESSAGE value="Ready?" />
     <MESSAGE value="MVP3" />
     <MESSAGE value="23/12" />
-    <option name="LAST_COMMIT_MESSAGE" value="23/12" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2098" y="264" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637239498176">
@@ -704,110 +698,110 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2560" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637497323840" />
-    <state width="668" height="464" key="DebuggerActiveHint" timestamp="1640264875746">
+    <state width="668" height="464" key="DebuggerActiveHint" timestamp="1640270200701">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="668" height="464" key="DebuggerActiveHint/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640264875746" />
+    <state width="668" height="464" key="DebuggerActiveHint/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270200701" />
     <state width="497" height="464" key="DebuggerActiveHint/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637498910287" />
-    <state width="1877" height="311" key="GridCell.Tab.0.bottom" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.0.bottom" timestamp="1640270356187">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356187" />
     <state width="1877" height="557" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715370" />
-    <state width="1877" height="311" key="GridCell.Tab.0.center" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.0.center" timestamp="1640270356187">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356187" />
     <state width="1877" height="557" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715370" />
-    <state width="1877" height="311" key="GridCell.Tab.0.left" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.0.left" timestamp="1640270356187">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356187" />
     <state width="1877" height="557" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715370" />
-    <state width="1877" height="311" key="GridCell.Tab.0.right" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.0.right" timestamp="1640270356187">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356187" />
     <state width="1877" height="557" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715370" />
-    <state width="1877" height="311" key="GridCell.Tab.1.bottom" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.1.bottom" timestamp="1640270363429">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270363429" />
     <state width="1877" height="523" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.1.center" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.1.center" timestamp="1640270363429">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270363429" />
     <state width="1877" height="523" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.1.left" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.1.left" timestamp="1640270363429">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270363429" />
     <state width="1877" height="523" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.1.right" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.1.right" timestamp="1640270363429">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270363429" />
     <state width="1877" height="523" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.2.bottom" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.2.bottom" timestamp="1640270356080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.2.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.2.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356080" />
     <state width="1877" height="523" key="GridCell.Tab.2.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.2.center" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.2.center" timestamp="1640270356080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.2.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.2.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356080" />
     <state width="1877" height="523" key="GridCell.Tab.2.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.2.left" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.2.left" timestamp="1640270356080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.2.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.2.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356080" />
     <state width="1877" height="523" key="GridCell.Tab.2.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.2.right" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.2.right" timestamp="1640270356080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.2.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.2.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356080" />
     <state width="1877" height="523" key="GridCell.Tab.2.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.3.bottom" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.3.bottom" timestamp="1640270356080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.3.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.3.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356080" />
     <state width="1877" height="523" key="GridCell.Tab.3.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.3.center" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.3.center" timestamp="1640270356080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.3.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.3.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356080" />
     <state width="1877" height="523" key="GridCell.Tab.3.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.3.left" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.3.left" timestamp="1640270356080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.3.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.3.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356080" />
     <state width="1877" height="523" key="GridCell.Tab.3.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.3.right" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.3.right" timestamp="1640270356080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.3.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.3.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356080" />
     <state width="1877" height="523" key="GridCell.Tab.3.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.4.bottom" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.4.bottom" timestamp="1640270356080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.4.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.4.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356080" />
     <state width="1877" height="523" key="GridCell.Tab.4.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.4.center" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.4.center" timestamp="1640270356080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.4.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.4.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356080" />
     <state width="1877" height="523" key="GridCell.Tab.4.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.4.left" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.4.left" timestamp="1640270356080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.4.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.4.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356080" />
     <state width="1877" height="523" key="GridCell.Tab.4.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
-    <state width="1877" height="311" key="GridCell.Tab.4.right" timestamp="1640268431233">
+    <state width="1877" height="311" key="GridCell.Tab.4.right" timestamp="1640270356080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="311" key="GridCell.Tab.4.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268431233" />
+    <state width="1877" height="311" key="GridCell.Tab.4.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640270356080" />
     <state width="1877" height="523" key="GridCell.Tab.4.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637500715367" />
     <state x="552" y="272" width="929" height="656" key="Rider.ProjectTemplateDialog.Size" timestamp="1638940952943">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -825,10 +819,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="100" y="100" width="1720" height="880" key="VCS.FileHistoryDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1637061533252" />
-    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2" timestamp="1640233050921">
+    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2" timestamp="1640268864347">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640233050921" />
+    <state x="552" y="273" width="1003" height="534" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1640268864347" />
     <state x="1951" y="0" width="1537" height="1066" maximized="true" key="dock-window-1" timestamp="1640267659306">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -849,102 +843,5 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1638698087228" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TelegramBotAsp/Commands/TextCommand.cs</url>
-          <line>31</line>
-          <properties documentPath="C:\Users\LPNHR\Desktop\Типо рабочий стол\Code\.net\TelegramBotAsp\TelegramBotAsp\Commands\TextCommand.cs" initialLine="31">
-            <startOffsets>
-              <option value="1104" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1129" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TelegramBotAsp/Services/DataDownloadService.cs</url>
-          <line>37</line>
-          <properties documentPath="C:\Users\LPNHR\Desktop\Типо рабочий стол\Code\.net\TelegramBotAsp\TelegramBotAsp\Services\DataDownloadService.cs" initialLine="37">
-            <startOffsets>
-              <option value="1356" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1375" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TelegramBotAsp/Services/DataDownloadService.cs</url>
-          <line>36</line>
-          <properties documentPath="C:\Users\LPNHR\Desktop\Типо рабочий стол\Code\.net\TelegramBotAsp\TelegramBotAsp\Services\DataDownloadService.cs" initialLine="36">
-            <startOffsets>
-              <option value="1291" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1343" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TelegramBotAsp/Services/DataDownloadService.cs</url>
-          <line>35</line>
-          <properties documentPath="C:\Users\LPNHR\Desktop\Типо рабочий стол\Code\.net\TelegramBotAsp\TelegramBotAsp\Services\DataDownloadService.cs" initialLine="35">
-            <startOffsets>
-              <option value="1192" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1278" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TelegramBotAsp/Services/DataDownloadService.cs</url>
-          <line>20</line>
-          <properties documentPath="C:\Users\LPNHR\Desktop\Типо рабочий стол\Code\.net\TelegramBotAsp\TelegramBotAsp\Services\DataDownloadService.cs" initialLine="20">
-            <startOffsets>
-              <option value="696" />
-            </startOffsets>
-            <endOffsets>
-              <option value="715" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TelegramBotAsp/Services/DataDownloadService.cs</url>
-          <line>19</line>
-          <properties documentPath="C:\Users\LPNHR\Desktop\Типо рабочий стол\Code\.net\TelegramBotAsp\TelegramBotAsp\Services\DataDownloadService.cs" initialLine="19">
-            <startOffsets>
-              <option value="656" />
-            </startOffsets>
-            <endOffsets>
-              <option value="683" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TelegramBotAsp/Services/DataDownloadService.cs</url>
-          <line>21</line>
-          <properties documentPath="C:\Users\LPNHR\Desktop\Типо рабочий стол\Code\.net\TelegramBotAsp\TelegramBotAsp\Services\DataDownloadService.cs" initialLine="21">
-            <startOffsets>
-              <option value="728" />
-            </startOffsets>
-            <endOffsets>
-              <option value="737" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

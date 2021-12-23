@@ -42,7 +42,7 @@ namespace TelegramBotAsp.Commands
             else
             {
                 var responses = _dataDownloadService.GetTemplates((string.Join(' ', info.Skip(1)))).Result;
-                var reply = _replyKeyBoard.CreateInlineKeyBoard(responses);
+                var reply = _replyKeyBoard.CreateInlineKeyBoard(responses.Item1);
                 await _botClient.SendTextMessageAsync(user.ChatId,
                     await _dataDownloadService.GetTopicRequests(string.Join(' ', info.Skip(1))),
                     ParseMode.Markdown, replyMarkup: reply);

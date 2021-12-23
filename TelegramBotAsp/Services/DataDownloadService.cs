@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MoreLinq;
 using Telegram.Bot.Types;
 using TelegramBotAsp.Entities;
 
@@ -10,7 +12,7 @@ namespace TelegramBotAsp.Services
     {
         private readonly IUserService _userService;
         private readonly Dictionary<long, AppUser> _users = new Dictionary<long, AppUser>();
-        private Dictionary<string, string> _templates;
+        private List<Tuple<string, string>> _templates;
         private Dictionary<string, string> _requestsTopics;
         private readonly DataContext _context;
 
@@ -31,27 +33,27 @@ namespace TelegramBotAsp.Services
             return user;
         }
 
-        public async Task<List<string>> GetTemplates(string template)
+        public async Task<Tuple<List<string>, string>> GetTemplates(string template)
         {
-            var count = _requestsTopics.Count(valuePair => valuePair.Value.Equals(template)) != 1;
-            var check = _requestsTopics.ContainsValue(template);
-            if (check && count)
-                return _requestsTopics
+            if (_requestsTopics.ContainsValue(template) &&
+                _requestsTopics.Count(valuePair => valuePair.Value.Equals(template)) != 1)
+                return Tuple.Create(_requestsTopics
                     .Where(valuePair => valuePair.Value.Equals(template))
                     .Select(x => x.Key)
-                    .ToList();
-            return _templates
-                .Where(valuePair => valuePair.Key.Equals(template))
-                .Select(x => x.Value)
-                .ToList();
+                    .ToList(), "Topic");
+            return Tuple.Create(_templates
+                .Where(valuePair => valuePair.Item1.Equals(template))
+                .Select(x => x.Item2)
+                .ToList(), "Template");
         }
 
         public async Task Update()
         {
-            _templates = _context.Templates.ToList().ToDictionary(key => key.Request.ToLower(), 
-                    element => element.Response.ToLower());
-            _requestsTopics = _context.Templates.ToList().ToDictionary(key => key.Request.ToLower(), 
-                    element => element.TopicName.ToLower());
+            _templates = _context.Templates.ToList()
+                .Select(x => Tuple.Create(x.Request.ToLower(), x.Response)).ToList();
+            _requestsTopics = _context.Templates.ToList().DistinctBy(x => x.Request).ToDictionary(
+                key => key.Request.ToLower(),
+                element => element.TopicName.ToLower());
             var check = 0;
         }
 
