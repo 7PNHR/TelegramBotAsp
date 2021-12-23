@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 using Telegram.Bot.Types;
 using TelegramBotAsp.Entities;
 
@@ -12,6 +11,7 @@ namespace TelegramBotAsp.Services
         private readonly IUserService _userService;
         private readonly Dictionary<long, AppUser> _users = new Dictionary<long, AppUser>();
         private Dictionary<string, string> _templates;
+        private Dictionary<string, string> _requestsTopics;
         private readonly DataContext _context;
 
 
@@ -31,17 +31,28 @@ namespace TelegramBotAsp.Services
             return user;
         }
 
-        public async Task<string> GetTemplate(string template)
+        public async Task<List<string>> GetTemplates(string template)
         {
-            var temp = _templates
-                .FirstOrDefault(valuePair => valuePair.Key.ToLower().Equals(template.ToLower()));
-            return temp.Value;
+            var count = _requestsTopics.Count(valuePair => valuePair.Value.Equals(template)) != 1;
+            var check = _requestsTopics.ContainsValue(template);
+            if (check && count)
+                return _requestsTopics
+                    .Where(valuePair => valuePair.Value.Equals(template))
+                    .Select(x => x.Key)
+                    .ToList();
+            return _templates
+                .Where(valuePair => valuePair.Key.Equals(template))
+                .Select(x => x.Value)
+                .ToList();
         }
 
         public async Task Update()
         {
-            _templates = _context.Templates.ToList()
-                .ToDictionary(key => key.Request, element => element.Response);
+            _templates = _context.Templates.ToList().ToDictionary(key => key.Request.ToLower(), 
+                    element => element.Response.ToLower());
+            _requestsTopics = _context.Templates.ToList().ToDictionary(key => key.Request.ToLower(), 
+                    element => element.TopicName.ToLower());
+            var check = 0;
         }
 
         public async Task Log(AppUser appUser, string message)
@@ -53,10 +64,15 @@ namespace TelegramBotAsp.Services
         public async Task<string> GetTopicRequests(string topicName)
         {
             return _context.Templates
-                .Where(template => topicName.ToLower().Equals(template.TopicName.ToLower()))
-                .ToList()//Странно конечно, когда ленивый метод не хочет доставать данные из базы без вызова ToList()
+                .Where(template => topicName.Equals(template.TopicName))
+                .ToList() //Странно конечно, когда ленивый метод не хочет доставать данные из базы без вызова ToList()
                 .Select(x => x.Request.ToLower())
                 .Aggregate((x, y) => x + "\n" + y);
+        }
+
+        public async Task<List<string>> GetTopics()
+        {
+            return _requestsTopics.Select(x => x.Value).Distinct().ToList();
         }
     }
 }

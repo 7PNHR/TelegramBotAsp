@@ -66,6 +66,7 @@
           <e p="IMessageHandler.cs" t="Include" />
           <e p="IUserService.cs" t="Include" />
           <e p="MessageHandler.cs" t="Include" />
+          <e p="ReplyKeyBoardCreateService.cs" t="Include" />
           <e p="TelegramBot.cs" t="Include" />
           <e p="UserService.cs" t="Include" />
         </e>

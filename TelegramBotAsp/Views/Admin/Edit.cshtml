@@ -42,6 +42,16 @@
     </div>
     <hr/>
     <div>
+        <p>Добавление ответа к уже существующему шаблону</p>
+        <form method="post" action="add-request">
+            <textarea cols="50" name="mainRequest" placeholder="Шаблон вопроса"></textarea>
+            <textarea cols="50" name="addictedRequest" placeholder="Шаблон дополнительного ответа"></textarea>
+            <br/>
+            <button class="btn btn-primary" type="submit">Редакторовать</button>
+        </form>
+    </div>
+    <hr/>
+    <div>
         <p>Удаление шаблона</p>
         <form method="post" action="remove-template">
             <textarea cols="50" name="requestToDelete" placeholder="Шаблон вопроса"></textarea>

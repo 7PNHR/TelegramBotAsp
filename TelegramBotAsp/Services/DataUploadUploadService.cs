@@ -34,6 +34,15 @@ namespace TelegramBotAsp.Services
             await _dataDownloadService.Update();
         }
 
+        public async Task AddRequest(string mainRequest, string newRequest)
+        {
+            var template = await _context.Templates.FirstOrDefaultAsync(x => x.Request.ToLower().Equals(mainRequest.ToLower()));
+            await _context.Templates.AddAsync(new TextTemplate()
+                {Request = newRequest, TopicName = template.TopicName, Response = template.Response});
+            await _context.SaveChangesAsync();
+            await _dataDownloadService.Update();
+        }
+
         public async Task RemoveTemplate(string request)
         {
             var template = await _context.Templates.FirstOrDefaultAsync(

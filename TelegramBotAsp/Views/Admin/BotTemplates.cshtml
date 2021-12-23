@@ -5,8 +5,6 @@
 }
 
 <!DOCTYPE html>
-
-<html>
 <head>
     <title>Шаблоны</title>
 </head>
@@ -14,9 +12,8 @@
 <div>
     @foreach (var e in Model.Templates)
     {
-        <p>Вопрос: @e.Request <br/> Ответ:@e.Response</p>
+        <p>Вопрос: @e.Request <br/> Ответ:@e.Response <br/> Тема:@e.TopicName</p>
         <hr/>
     }
 </div>
 </body>
-</html>

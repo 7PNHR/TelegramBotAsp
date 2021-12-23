@@ -2,6 +2,7 @@
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using TelegramBotAsp.Entities;
 using TelegramBotAsp.Services;
 
 namespace TelegramBotAsp.Commands
@@ -19,9 +20,8 @@ namespace TelegramBotAsp.Commands
 
         public override string Name => CommandNames.StartCommand;
 
-        public override async Task ExecuteAsync(Update update)
+        public override async Task ExecuteAsync(AppUser user,string text)
         {
-            var user = await _dataDownloadService.GetUser(update);
             await _botClient.SendTextMessageAsync(user.ChatId,
                 "Добро пожаловать! Я онбординговый бот!" +
                 "\nВы можете задавать мне вопросы, касательно организации." +

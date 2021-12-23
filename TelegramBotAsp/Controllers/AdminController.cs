@@ -11,7 +11,6 @@ using MediaTypeHeaderValue = System.Net.Http.Headers.MediaTypeHeaderValue;
 
 namespace TelegramBotAsp.Controllers
 {
-    //TODO написать пару страничек, с нормальным вводом сообщений
     [ApiController]
     [Route("admin")]
     public class AdminController : Controller
@@ -84,7 +83,15 @@ namespace TelegramBotAsp.Controllers
             var oldRequest = Request.Form.FirstOrDefault(p => p.Key == "oldRequest").Value.ToString();
             var newRequest = Request.Form.FirstOrDefault(p => p.Key == "newRequest").Value.ToString();
             _dataUploadService.EditRequest(oldRequest,newRequest);
-            RedirectPermanent("/admin/edit");
+            return RedirectToAction("Edit");
+        }
+        
+        [HttpPost("add-request")]
+        public IActionResult AddRequest()
+        {
+            var mainRequest = Request.Form.FirstOrDefault(p => p.Key == "mainRequest").Value.ToString();
+            var addictedRequest = Request.Form.FirstOrDefault(p => p.Key == "addictedRequest").Value.ToString();
+            _dataUploadService.AddRequest(mainRequest,addictedRequest);
             return RedirectToAction("Edit");
         }
 
@@ -92,8 +99,7 @@ namespace TelegramBotAsp.Controllers
         public IActionResult RemoveTemplate()
         {
             var request = Request.Form.FirstOrDefault(p => p.Key == "requestToDelete").Value.ToString();
-            _dataUploadService.RemoveTemplate(request);     
-            RedirectPermanent("/admin/edit");
+            _dataUploadService.RemoveTemplate(request);
             return RedirectToAction("Edit");
         }
     }
