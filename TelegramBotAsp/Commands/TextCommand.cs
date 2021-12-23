@@ -12,22 +12,22 @@ namespace TelegramBotAsp.Commands
     public class TextCommand : BaseCommand
     {
         private readonly TelegramBotClient _botClient;
-        private readonly IRepositoryService _repositoryService;
+        private readonly IDataDownloadService _dataDownloadService;
 
-        public TextCommand(TelegramBot telegramBot, IRepositoryService repositoryService)
+        public TextCommand(TelegramBot telegramBot, IDataDownloadService dataDownloadService)
         {
             _botClient = telegramBot.GetBot().Result;
-            _repositoryService = repositoryService;
+            _dataDownloadService = dataDownloadService;
         }
 
         public override string Name => CommandNames.TextCommand;
 
         public override async Task ExecuteAsync(Update update)
         {
-            var user = await _repositoryService.GetUser(update);
-            var response =  _repositoryService.GetTemplate(update.Message.Text).Result;
+            var user = await _dataDownloadService.GetUser(update);
+            var response =  _dataDownloadService.GetTemplate(update.Message.Text).Result;
             await _botClient.SendTextMessageAsync(user.ChatId, response, ParseMode.Markdown);
-            await _repositoryService.Log(user, update.Message.Text.ToLower());
+            await _dataDownloadService.Log(user, update.Message.Text.ToLower());
         }
     }
 }

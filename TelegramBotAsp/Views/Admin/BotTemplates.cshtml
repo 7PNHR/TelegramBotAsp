@@ -1,0 +1,22 @@
+﻿@model TelegramBotAsp.Models.Admin.BotTemplateModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Шаблоны</title>
+</head>
+<body>
+<div>
+    @foreach (var e in Model.Templates)
+    {
+        <p>Вопрос: @e.Request <br/> Ответ:@e.Response</p>
+        <hr/>
+    }
+</div>
+</body>
+</html>

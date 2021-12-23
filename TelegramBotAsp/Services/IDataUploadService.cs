@@ -5,7 +5,7 @@ using TelegramBotAsp.Entities;
 
 namespace TelegramBotAsp.Services
 {
-    public interface IDataService
+    public interface IDataUploadService
     {
         public Task AddTemplate(string request, string response, string topicName);
         public Task EditRequest(string oldRequest, string newRequest);

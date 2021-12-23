@@ -10,12 +10,12 @@ namespace TelegramBotAsp.Commands
     public class HelpCommand : BaseCommand
     {
         private readonly TelegramBotClient _botClient;
-        private readonly IRepositoryService _repositoryService;
+        private readonly IDataDownloadService _dataDownloadService;
 
-        public HelpCommand( TelegramBot telegramBot, IRepositoryService repositoryService)
+        public HelpCommand( TelegramBot telegramBot, IDataDownloadService dataDownloadService)
         {
             _botClient = telegramBot.GetBot().Result;
-            _repositoryService = repositoryService;
+            _dataDownloadService = dataDownloadService;
         }
 
         public override string Name => CommandNames.HelpCommand;
@@ -23,7 +23,7 @@ namespace TelegramBotAsp.Commands
         public override async Task ExecuteAsync(Update update)
         {
             var info = update.Message.Text.Split(' ');
-            var user = await _repositoryService.GetUser(update);
+            var user = await _dataDownloadService.GetUser(update);
             if (info.Length == 1)
             {
                 await _botClient.SendTextMessageAsync(user.ChatId,
@@ -31,13 +31,13 @@ namespace TelegramBotAsp.Commands
                     "\n- ключевые продукты компании\n- корпоративная культура\n- соц.пакет\n- инструменты"+
                     "\nМожете написать /help (название темы) для получения подсказки",
                     ParseMode.Markdown);
-                _repositoryService.Log(user, CommandNames.HelpCommand);
+                _dataDownloadService.Log(user, CommandNames.HelpCommand);
             }
             else
             {
-                await _botClient.SendTextMessageAsync(user.ChatId,await _repositoryService.GetTopicRequests(string.Join(' ',info.Skip(1)))
+                await _botClient.SendTextMessageAsync(user.ChatId,await _dataDownloadService.GetTopicRequests(string.Join(' ',info.Skip(1)))
                     ,ParseMode.Markdown);
-                _repositoryService.Log(user, update.Message.Text.ToLower());
+                _dataDownloadService.Log(user, update.Message.Text.ToLower());
             }
         }
     }

@@ -1,72 +1,100 @@
 ﻿using System;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.Net.Http.Headers;
 using Newtonsoft.Json;
-using TelegramBotAsp.Entities;
 using TelegramBotAsp.Services;
+using TelegramBotAsp.Models.Admin;
+using MediaTypeHeaderValue = System.Net.Http.Headers.MediaTypeHeaderValue;
 
 namespace TelegramBotAsp.Controllers
 {
     //TODO написать пару страничек, с нормальным вводом сообщений
     [ApiController]
     [Route("admin")]
-    public class AdminController : ControllerBase
+    public class AdminController : Controller
     {
-        private readonly IDataService _dataService;
+        private readonly IDataUploadService _dataUploadService;
 
-        public AdminController(IDataService dataService)
+        public AdminController(IDataUploadService dataUploadService)
         {
-            _dataService = dataService;
+            _dataUploadService = dataUploadService;
+        }
+
+        [HttpGet("")]
+        public IActionResult Index()
+        {
+            return View();
         }
 
         [HttpGet("logs")]
-        public async Task<IActionResult> GetBotLogs()
+        public IActionResult BotLogs()
         {
-            return Ok(JsonConvert.SerializeObject(_dataService.GetLogs().Result));
-        }
-        
-        [HttpGet("templates")]
-        public async Task<IActionResult> GetBotTemplates()
-        {
-            return Ok(JsonConvert.SerializeObject(_dataService.GetTemplates().Result));
+            return View(new BotLogsModel(_dataUploadService.GetLogs().Result));
+            //return Ok(JsonConvert.SerializeObject(_dataUploadService.GetLogs().Result));
         }
 
         [HttpGet("logs-period")]
-        public async Task<IActionResult> GetBotLogs(int days)
+        public IActionResult BotLogsInPeriod(int days)
         {
             var date = DateTime.UtcNow - TimeSpan.FromDays(days);
-            return Ok(JsonConvert.SerializeObject(_dataService.GetLogs().Result.Where(x => x.Date >= date).ToList()));
+            return View(new BotLogsModel(_dataUploadService.GetLogs().Result.Where(x => x.Date >= date).ToList()));
+            //return Ok(JsonConvert.SerializeObject(_dataUploadService.GetLogs().Result.Where(x => x.Date >= date).ToList()));
         }
 
-        [HttpPost("add-template")]
-        public async Task<IActionResult> AddRequestAndResponse(string request, string response, string topicName)
+        [HttpGet("templates")]
+        public IActionResult BotTemplates()
         {
-            await _dataService.AddTemplate(request, response, topicName);
-            return Ok();
+            return View(new BotTemplateModel(_dataUploadService.GetTemplates().Result));
+            //return Ok(JsonConvert.SerializeObject(_dataUploadService.GetTemplates().Result));
+        }
+        
+        [HttpGet("edit")]
+        public IActionResult Edit()
+        {
+            return View();
+        }
+        
+        
+        [HttpPost("add-template")]
+        public IActionResult AddTemplate()
+        {
+            var request = Request.Form.FirstOrDefault(p => p.Key == "request").Value.ToString();
+            var response = Request.Form.FirstOrDefault(p => p.Key == "response").Value.ToString();
+            var topicName = Request.Form.FirstOrDefault(p => p.Key == "topicName").Value.ToString();
+            _dataUploadService.AddTemplate(request, response, topicName);
+            return RedirectToAction("Edit");
+            
         }
 
         [HttpPost("edit-template")]
-        public async Task<IActionResult> EditTemplate(string request, string newResponse)
+        public IActionResult EditTemplate()
         {
-            await _dataService.EditTemplate(request, newResponse);
-            return Ok();
-        }
-
-        [HttpPost("remove-template")]
-        public async Task<IActionResult> RemoveTemplate(string request)
-        {
-            await _dataService.RemoveTemplate(request);
-            return Ok();
+            var request = Request.Form.FirstOrDefault(p => p.Key == "requestToEdit").Value.ToString();
+            var newResponse = Request.Form.FirstOrDefault(p => p.Key == "newResponse").Value.ToString();
+            _dataUploadService.EditTemplate(request, newResponse);
+            return RedirectToAction("Edit");
         }
 
         [HttpPost("edit-request")]
-        public async Task<IActionResult> EditResponse(string oldRequest, string newRequest)
+        public IActionResult EditResponse()
         {
-            await _dataService.EditRequest(oldRequest,newRequest);
-            return Ok();
+            var oldRequest = Request.Form.FirstOrDefault(p => p.Key == "oldRequest").Value.ToString();
+            var newRequest = Request.Form.FirstOrDefault(p => p.Key == "newRequest").Value.ToString();
+            _dataUploadService.EditRequest(oldRequest,newRequest);
+            RedirectPermanent("/admin/edit");
+            return RedirectToAction("Edit");
         }
 
+        [HttpPost("remove-template")]
+        public IActionResult RemoveTemplate()
+        {
+            var request = Request.Form.FirstOrDefault(p => p.Key == "requestToDelete").Value.ToString();
+            _dataUploadService.RemoveTemplate(request);     
+            RedirectPermanent("/admin/edit");
+            return RedirectToAction("Edit");
+        }
     }
 }

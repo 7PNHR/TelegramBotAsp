@@ -1,0 +1,23 @@
+﻿@using TelegramBotAsp.Entities
+@model TelegramBotAsp.Models.Admin.BotLogsModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Логи</title>
+</head>
+<body>
+<div>
+      @foreach (var e in Model.Logs)
+      {
+          <p>@e.Message @e.Date</p>
+          <hr/>
+      }
+</div>
+</body>
+</html>

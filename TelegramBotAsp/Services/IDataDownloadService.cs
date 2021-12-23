@@ -4,7 +4,7 @@ using TelegramBotAsp.Entities;
 
 namespace TelegramBotAsp.Services
 {
-    public interface IRepositoryService
+    public interface IDataDownloadService
     {
         Task<AppUser> GetUser(Update update);
         Task<string> GetTemplate(string template);

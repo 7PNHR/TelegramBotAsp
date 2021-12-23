@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<head>
+    <title>Редактирование</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div>
+    <div>
+        <p>Добавление шаблона</p>
+        <form method="post" action="add-template">
+            <textarea name="request" cols="50" placeholder="Шаблон вопроса"></textarea>
+            <textarea name="response" cols="50" placeholder="Шаблон ответа"></textarea>
+            <textarea name="topicName" cols="50" placeholder="Тема"></textarea>
+            <br/>
+            <button class="btn btn-primary" type="submit">Добавить</button>
+        </form>
+    </div>
+    <hr/>
+    <div>
+        <p>Редактирование ответа</p>
+        <form method="post" action="edit-template">
+            <textarea cols="50" name="requestToEdit" placeholder="Шаблон вопроса"></textarea>
+            <textarea cols="50" name="newResponse" placeholder="Шаблон нового ответа"></textarea>
+            <br/>
+            <button class="btn btn-primary" type="submit">Редакторовать</button>
+        </form>
+    </div>
+    <hr/>
+    <div>
+        <p>Редактирование вопроса</p>
+        <form method="post" action="edit-request">
+            <textarea cols="50" name="oldRequest" placeholder="Старый шаблон вопроса"></textarea>
+            <textarea cols="50" name="newRequest" placeholder="Новый шаблон ответа"></textarea>
+            <br/>
+            <button class="btn btn-primary" type="submit">Редакторовать</button>
+        </form>
+    </div>
+    <hr/>
+    <div>
+        <p>Удаление шаблона</p>
+        <form method="post" action="remove-template">
+            <textarea cols="50" name="requestToDelete" placeholder="Шаблон вопроса"></textarea>
+            <br/>
+            <button class="btn btn-primary" type="submit">Удалить</button>
+        </form>
+    </div>
+</div>
+</body>

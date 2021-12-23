@@ -6,22 +6,22 @@ using TelegramBotAsp.Entities;
 
 namespace TelegramBotAsp.Services
 {
-    public class DataService : IDataService
+    public class DataUploadUploadService : IDataUploadService
     {
         private readonly DataContext _context;
-        private readonly IRepositoryService _repositoryService;
+        private readonly IDataDownloadService _dataDownloadService;
 
-        public DataService(DataContext dataContext, IRepositoryService repositoryService)
+        public DataUploadUploadService(DataContext dataContext, IDataDownloadService dataDownloadService)
         {
             _context = dataContext;
-            _repositoryService = repositoryService;
+            _dataDownloadService = dataDownloadService;
         }
 
         public async Task AddTemplate(string request, string response, string topicName)
         {
             await _context.Templates.AddAsync(new TextTemplate {Request = request, Response = response, TopicName = topicName});
             await _context.SaveChangesAsync();
-            await _repositoryService.Update();
+            await _dataDownloadService.Update();
         }
 
         public async Task EditTemplate(string request, string newResponse)
@@ -31,7 +31,7 @@ namespace TelegramBotAsp.Services
             if (template == null) return;
             template.Response = newResponse;
             await _context.SaveChangesAsync();
-            await _repositoryService.Update();
+            await _dataDownloadService.Update();
         }
 
         public async Task RemoveTemplate(string request)
@@ -41,7 +41,7 @@ namespace TelegramBotAsp.Services
             if (template == null) return;
             _context.Templates.Remove(template);
             await _context.SaveChangesAsync();
-            await _repositoryService.Update();
+            await _dataDownloadService.Update();
         }
 
         public async Task EditRequest(string oldRequest, string newRequest)
@@ -51,7 +51,7 @@ namespace TelegramBotAsp.Services
             if (template == null) return;
             template.Request = newRequest;
             await _context.SaveChangesAsync();
-            await _repositoryService.Update();
+            await _dataDownloadService.Update();
         }
 
         public async Task<List<Log>> GetLogs()

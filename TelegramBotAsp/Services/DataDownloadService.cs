@@ -7,16 +7,15 @@ using TelegramBotAsp.Entities;
 
 namespace TelegramBotAsp.Services
 {
-    public class RepositoryService : IRepositoryService
+    public class DataDownloadService : IDataDownloadService
     {
         private readonly IUserService _userService;
         private readonly Dictionary<long, AppUser> _users = new Dictionary<long, AppUser>();
         private Dictionary<string, string> _templates;
         private readonly DataContext _context;
-        private readonly List<Log> _logs = new List<Log>();
 
 
-        public RepositoryService(IUserService userService, DataContext context)
+        public DataDownloadService(IUserService userService, DataContext context)
         {
             _userService = userService;
             _context = context;
@@ -41,24 +40,14 @@ namespace TelegramBotAsp.Services
 
         public async Task Update()
         {
-            _templates = _context.Templates
+            _templates = _context.Templates.ToList()
                 .ToDictionary(key => key.Request, element => element.Response);
         }
 
         public async Task Log(AppUser appUser, string message)
         {
-            _logs.Add(new Log {Message = message, User = appUser});
-            lock (_logs)
-            {
-                if (_logs.Count >= 10)
-                {
-                    foreach (var log in _logs)
-                        _context.Logs.Add(log);
-
-                    _context.SaveChanges();
-                    _logs.Clear();
-                }
-            }
+            _context.Logs.Add(new Log {Message = message, User = appUser});
+            _context.SaveChanges();
         }
 
         public async Task<string> GetTopicRequests(string topicName)
@@ -66,7 +55,7 @@ namespace TelegramBotAsp.Services
             return _context.Templates
                 .Where(template => topicName.ToLower().Equals(template.TopicName.ToLower()))
                 .ToList()//Странно конечно, когда ленивый метод не хочет доставать данные из базы без вызова ToList()
-                .Select(x => x.Request)
+                .Select(x => x.Request.ToLower())
                 .Aggregate((x, y) => x + "\n" + y);
         }
     }

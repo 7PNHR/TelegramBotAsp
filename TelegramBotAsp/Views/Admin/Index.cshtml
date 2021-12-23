@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Главная страничка</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div>
+    <div>
+        <form method="get" action="/admin/logs">
+            <button class="btn btn-primary" type="submit">Смотреть логи</button>
+        </form>
+    </div>
+    <hr/>
+    <div>
+        <form method="get" action="/admin/logs-period">
+            <p>Логи за период</p>
+            <input name="days" value="7"/>
+            <br/>
+            <br/>
+            <button class="btn btn-primary" type="submit">Смотреть логи</button>
+        </form>
+    </div>
+    <hr/>
+    <div>
+        <form method="get" action="/admin/templates">
+            <button class="btn btn-primary" type="submit">Смотреть шаблоны</button>
+        </form>
+    </div>
+    <hr/> 
+    <div>
+        <form method="get" action="/admin/edit">
+            <button class="btn btn-primary" type="submit">Редактировать шаблоны</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

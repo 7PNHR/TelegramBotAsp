@@ -34,14 +34,16 @@ namespace TelegramBotAsp
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "TelegramBot-Onboarding", Version = "v1"});
             });
+            services.AddControllersWithViews();
             services.AddSingleton<TelegramBot>();
             services.AddSingleton<IMessageHandler, MessageHandler>();
             services.AddSingleton<IUserService, UserService>();
-            services.AddSingleton<IDataService, DataService>();
-            services.AddSingleton<IRepositoryService, RepositoryService>();
+            services.AddSingleton<IDataUploadService, DataUploadUploadService>();
+            services.AddSingleton<IDataDownloadService, DataDownloadService>();
             services.AddSingleton<BaseCommand, StartCommand>();
             services.AddSingleton<BaseCommand, TextCommand>();
             services.AddSingleton<BaseCommand, HelpCommand>();
+            
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
@@ -53,8 +55,9 @@ namespace TelegramBotAsp
 
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json","TelegramBot-Onboarding"));
-            serviceProvider.GetRequiredService<TelegramBot>().GetBot().Wait();
+            app.UseStaticFiles();
             app.UseRouting();
+            serviceProvider.GetRequiredService<TelegramBot>().GetBot().Wait();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
