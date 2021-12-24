@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Telegram.Bot;
@@ -28,14 +29,19 @@ namespace TelegramBotAsp.Commands
 
         public override async Task ExecuteAsync(AppUser user, string text)
         {
-            var responses = _dataDownloadService.GetTemplates(text).Result;
-            IReplyMarkup inline;
-            if (responses.Item2.Equals("Topic"))
-                inline = _replyKeyBoard.CreateInlineKeyBoard(responses.Item1);
-            else
-                inline = new ReplyKeyboardRemove();
-            foreach (var resp in responses.Item1)
-                await _botClient.SendTextMessageAsync(user.ChatId, resp, ParseMode.Markdown, replyMarkup: inline);
+            var (responses, type) = _dataDownloadService.GetTemplates(text).Result;
+            IReplyMarkup inline = null;
+            if (type.Equals("Topic"))
+            {
+                inline = _replyKeyBoard.CreateInlineKeyBoard(user, responses);
+                responses.Reverse();
+                responses.Add("В этом разделе ты можешь узнать:");
+                responses.Reverse();
+            }
+            await _botClient.SendTextMessageAsync(user.ChatId,
+                string.Join('\n', responses),
+                ParseMode.Markdown,
+                replyMarkup: inline);
             await _dataDownloadService.Log(user, text.ToLower());
         }
     }

@@ -31,13 +31,11 @@ namespace TelegramBotAsp.Services
                     return;
                 }
             }
-
-            if (update.Type == UpdateType.CallbackQuery)
+            /*if (update.Type == UpdateType.CallbackQuery)
             {
                 await ExecuteCommand("text", update.CallbackQuery.Data, update);
                 return;
-            }
-
+            }*/
             await ExecuteCommand("text", update.Message.Text, update);
         }
 

@@ -36,13 +36,13 @@ namespace TelegramBotAsp.Commands
                     "\n- ключевые продукты компании\n- корпоративная культура\n- соц.пакет\n- инструменты\n- рабочее окружение" +
                     "\nМожете написать /help (название темы) для получения подсказки",
                     ParseMode.Markdown,
-                    replyMarkup: _replyKeyBoard.CreateInlineKeyBoard(topics));
+                    replyMarkup: _replyKeyBoard.CreateInlineKeyBoard(user, topics));
                 _dataDownloadService.Log(user, CommandNames.HelpCommand);
             }
             else
             {
                 var responses = _dataDownloadService.GetTemplates((string.Join(' ', info.Skip(1)))).Result;
-                var reply = _replyKeyBoard.CreateInlineKeyBoard(responses.Item1);
+                var reply = _replyKeyBoard.CreateInlineKeyBoard(user, responses.Item1);
                 await _botClient.SendTextMessageAsync(user.ChatId,
                     await _dataDownloadService.GetTopicRequests(string.Join(' ', info.Skip(1))),
                     ParseMode.Markdown, replyMarkup: reply);
