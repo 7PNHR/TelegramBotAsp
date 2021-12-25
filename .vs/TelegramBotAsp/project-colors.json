@@ -5,7 +5,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Прочие файлы",
       "ColorIndex": -1
+    },
+    "34a9053d-2329-40a2-a610-4a34392270f3": {
+      "ProjectGuid": "34a9053d-2329-40a2-a610-4a34392270f3",
+      "DisplayName": "TelegramBotAsp",
+      "ColorIndex": 0
     }
   },
-  "NextColorIndex": 0
+  "NextColorIndex": 1
 }

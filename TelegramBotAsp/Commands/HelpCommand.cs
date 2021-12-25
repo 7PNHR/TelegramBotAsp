@@ -32,8 +32,8 @@ namespace TelegramBotAsp.Commands
             {
                 var topics = await _dataDownloadService.GetTopics();
                 await _botClient.SendTextMessageAsync(user.ChatId,
-                    "Вы можете спросить меня про следующие темы:\n- оргструктура компании\n- документооборот" +
-                    "\n- ключевые продукты компании\n- корпоративная культура\n- соц.пакет\n- инструменты\n- рабочее окружение" +
+                    "Вы можете спросить меня про следующие темы:\n- Оргструктура компании\n- Документооборот" +
+                    "\n- Ключевые продукты компании\n- Корпоративная культура\n- Соц.пакет\n- Инструменты\n- Рабочее окружение" +
                     "\nМожете написать /help (название темы) для получения подсказки",
                     ParseMode.Markdown,
                     replyMarkup: _replyKeyBoard.CreateInlineKeyBoard(user, topics));
