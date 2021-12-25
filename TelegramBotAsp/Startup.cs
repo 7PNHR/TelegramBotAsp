@@ -45,7 +45,6 @@ namespace TelegramBotAsp
             services.AddSingleton<BaseCommand, TextCommand>();
             services.AddSingleton<BaseCommand, HelpCommand>();
             services.AddSingleton<BaseCommand, BackCommand>();
-            
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)

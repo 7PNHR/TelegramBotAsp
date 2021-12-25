@@ -19,7 +19,7 @@ namespace TelegramBotAsp.Services
 
         public async Task AddTemplate(string request, string response, string topicName)
         {
-            await _context.Templates.AddAsync(new TextTemplate {Request = request, Response = response, TopicName = topicName});
+            await _context.Templates.AddAsync(new TextTemplate {Request = request, Response = response, TopicName = topicName.ToLower()});
             await _context.SaveChangesAsync();
             await _dataDownloadService.Update();
         }
